@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/Scenes/LoveK2D\u6D77.unity"
+- path: "Assets/Scenes/LoveK45\u5EA6\u5716.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

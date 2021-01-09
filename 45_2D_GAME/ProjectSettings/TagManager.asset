@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 367412439
+    locked: 0
+  - name: Platforms
+    uniqueID: 2003553539
+    locked: 0
+  - name: Player
+    uniqueID: 818189817
+    locked: 0
+  - name: Foreground
+    uniqueID: 2747054553
+    locked: 0
+  - name: seaan
+    uniqueID: 3117233089
+    locked: 0
+  - name: 
+    uniqueID: 1523291297
+    locked: 0
