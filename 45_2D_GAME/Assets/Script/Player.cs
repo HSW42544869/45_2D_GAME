@@ -2,7 +2,7 @@
 
 public class Player : MonoBehaviour
 {
-    [Header("移動速度"), Range(0.1f,10)]
+    [Header("移動速度"), Range(0.1f, 10)]
     public float speed = 0.1f;
     [Header("是否在地板上"), Tooltip("用來儲存玩家是否站在地板上")]
     public bool isGround = false;
@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator ani;
 
+    private Gamemanager gm;
+
     void Update()
     {
         //移動
@@ -38,7 +40,7 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("攻擊開關", false);
         }
-        
+
     }
     private void Awake()
     {
@@ -47,11 +49,14 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
+        //透過<類型>取得物件
+        //僅限於此(類型)在場景上只有一個
+        gm = FindObjectOfType<Gamemanager>();
     }
 
     private void Start()
     {
-        
+
     }
 
     /// <summary>
@@ -63,7 +68,7 @@ public class Player : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         // 鋼體 的 速度 = 新 二為向量(水平浮點數 * 速度，剛體的加入度的y)
         rig.velocity = new Vector2(h * speed, rig.velocity.y);
-        ani.SetBool("跑步開關",h != 0);
+        ani.SetBool("跑步開關", h != 0);
         //垂直浮點數 = 輸入 的 取得軸向("垂直") - 上下WS
         float v = Input.GetAxis("Vertical");
         // 剛體 的 速度 = 新 二為向量(垂直浮點數 * 速度，剛體的加速度的x)
@@ -75,14 +80,14 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         //走路方向向左
-        if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        
+
         ani.SetBool("上跑開關", h > 0);
         ani.SetBool("下跑開關", h < 0);
-        
+
 
     }
 
@@ -99,7 +104,7 @@ public class Player : MonoBehaviour
             //生成(物件，座標，角度)
             GameObject spellsIns = Instantiate(spells, point.transform.position, point.transform.rotation);
             spellsIns.GetComponent<Rigidbody2D>().AddForce(transform.right * Speedspelles);
-  
+
         }
     }
 
@@ -108,8 +113,20 @@ public class Player : MonoBehaviour
     /// </summary>
     /// <param name="obj"></param>
     private void Dead(string obj)
-    { 
-    
+    {
+
+        if (obj == "敵人法術")
+        {
+            //如果 死亡開關 為是 就 跳出
+            if (ani.GetBool("死亡開關")) return;
+            enabled = false;
+            ani.SetBool("死亡開關", true);
+
+            //延遲呼叫("方法名稱",延遲時間)
+            Invoke("Replar", 2.5f);
+
+            gm.PlayDead();
+        }
     }
-    
+
 }
