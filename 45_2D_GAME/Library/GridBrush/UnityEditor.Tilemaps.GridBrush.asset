@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default Brush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: 369696823eaade54588dc89f1c956d47, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 92357f3d7a22e9b42bb1178236a5f8aa, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 48115540cc795ec41934a6799f2f00d7, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 84d1d6b0ca9dc8a4abce0c3f80f828ae, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: c4eb4733b9f843f4981d3a3e548931df, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 346dbcd616bd6f240acf1717dae2d8de, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -71,5 +71,5 @@ MonoBehaviour:
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Size: {x: 1, y: 3, z: 1}
-  m_Pivot: {x: 0, y: 2, z: 0}
+  m_Pivot: {x: 0, y: 0, z: 0}
   m_CanChangeZPosition: 0

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,8 +17,8 @@ public class Player : MonoBehaviour
     public int Speedspelles = 500;
     [Header("施法音效")]
     public AudioClip soundFire;
-    [Header("生命數量"), Range(0, 10)]
-    public int live = 3;
+    public bool inPortal;
+
 
     private int score;
     private AudioSource aud;
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
         {
             ani.SetBool("攻擊開關", false);
         }
-
+        Nextlevel();
     }
     private void Awake()
     {
@@ -52,6 +53,22 @@ public class Player : MonoBehaviour
         //透過<類型>取得物件
         //僅限於此(類型)在場景上只有一個
         gm = FindObjectOfType<Gamemanager>();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Equals("傳送門") || collision.tag.Equals("Finish"))
+        {
+            inPortal = true;
+            gm.showMessage(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "傳送門" || collision.tag.Equals("Finish"))
+        {
+            inPortal = false;
+            gm.showMessage(false);
+        }
     }
 
     private void Start()
@@ -98,13 +115,55 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+
             //音源 的 播放一次音效(音效，隨機大小聲)
             aud.PlayOneShot(soundFire, Random.Range(0.8f, 1.5f));
             //生成 子彈在槍口
             //生成(物件，座標，角度)
             GameObject spellsIns = Instantiate(spells, point.transform.position, point.transform.rotation);
-            spellsIns.GetComponent<Rigidbody2D>().AddForce(transform.right * Speedspelles);
 
+
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = Camera.main.nearClipPlane;
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+
+            Vector3 directY = worldPosition - transform.position;
+            directY.x = 0;
+            directY.y = Mathf.Clamp(directY.y, -1f, 1f);
+
+
+            //print("MO" + (worldPosition - transform.position));
+            spellsIns.GetComponent<Rigidbody2D>().AddForce((transform.right + directY) * Speedspelles);
+            //spellsIns.GetComponent<Rigidbody2D>().AddForce(transform.right * Speedspelles);
+
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        string tag = collision.collider.tag;
+        switch (tag)
+        {
+            case "敵人法術":
+                if (gm.HurtAndCheckDead())
+                {
+                    Dead();
+                    gm.ShowGameMenu(false);
+                }
+                break;
+            case "Key":
+                gm.addKey();
+                Destroy(collision.collider.transform.gameObject);
+                break;
+            case "Speedup":
+                speed += 2;
+                Destroy(collision.collider.transform.gameObject);
+                break;
+            case "addLive":
+                gm.addLive();
+                Destroy(collision.collider.transform.gameObject);
+                break;
+            default:
+                break;
         }
     }
 
@@ -112,21 +171,30 @@ public class Player : MonoBehaviour
     /// 死亡功能
     /// </summary>
     /// <param name="obj"></param>
-    private void Dead(string obj)
+    private void Dead()
     {
+        //如果 死亡開關 為是 就 跳出
+        if (ani.GetBool("死亡開關")) return;
+        enabled = false;
+        ani.SetBool("死亡開關", true);
 
-        if (obj == "敵人法術")
-        {
-            //如果 死亡開關 為是 就 跳出
-            if (ani.GetBool("死亡開關")) return;
-            enabled = false;
-            ani.SetBool("死亡開關", true);
-
-            //延遲呼叫("方法名稱",延遲時間)
-            Invoke("Replar", 2.5f);
-
-            gm.PlayDead();
-        }
+        //if (Gamemanager.live > 1) Invoke("Replay", 2.5f);
     }
 
+    private void Replay()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private void Nextlevel()
+    {
+        if (inPortal && Input.GetKeyDown(KeyCode.R))
+        {
+            int lvIndex = SceneManager.GetActiveScene().buildIndex;
+
+            lvIndex++;
+
+            SceneManager.LoadScene(lvIndex);
+
+        }
+    }
 }
