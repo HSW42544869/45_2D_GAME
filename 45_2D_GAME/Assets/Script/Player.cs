@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     private AudioSource aud;
     private Rigidbody2D rig;
     private Animator ani;
+    public GameObject myBag;
+    bool isOpen;
 
     private Gamemanager gm;
 
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
             ani.SetBool("攻擊開關", false);
         }
         Nextlevel();
+        OpenMyBag();
     }
     private void Awake()
     {
@@ -196,5 +199,14 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(lvIndex);
 
         }
+    }
+    void OpenMyBag()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            isOpen = !isOpen;
+            myBag.SetActive(isOpen);
+        }
+        
     }
 }

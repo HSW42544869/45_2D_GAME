@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.LineEndingsEditor", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.FungusLuaJSONCheckerEditor", "Fungus.FungusLuaJSONCheckerEditor.csproj", "{DA19B63D-12B6-6CFD-A4AE-ED36A6512252}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{75F5504D-A237-AF0C-52C8-9134A130612B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus.UsfxrEditor", "Fungus.UsfxrEditor.csproj", "{6FDEACA8-32E3-4128-1F7D-9B459E0AEA40}"
 EndProject
 Global
@@ -53,10 +51,6 @@ Global
 		{DA19B63D-12B6-6CFD-A4AE-ED36A6512252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA19B63D-12B6-6CFD-A4AE-ED36A6512252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA19B63D-12B6-6CFD-A4AE-ED36A6512252}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75F5504D-A237-AF0C-52C8-9134A130612B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75F5504D-A237-AF0C-52C8-9134A130612B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75F5504D-A237-AF0C-52C8-9134A130612B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75F5504D-A237-AF0C-52C8-9134A130612B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6FDEACA8-32E3-4128-1F7D-9B459E0AEA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FDEACA8-32E3-4128-1F7D-9B459E0AEA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FDEACA8-32E3-4128-1F7D-9B459E0AEA40}.Release|Any CPU.ActiveCfg = Release|Any CPU

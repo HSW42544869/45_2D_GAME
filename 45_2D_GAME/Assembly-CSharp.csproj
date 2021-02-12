@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Canvas預製物\inventoryScripts\item.cs" />
     <Compile Include="Assets\Player0123.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\Door.cs" />
@@ -79,9 +80,6 @@
     <Compile Include="Assets\Script\Rotate.cs" />
     <Compile Include="Assets\Script\ghost.cs" />
     <Compile Include="Assets\Script\monster.cs" />
-    <Compile Include="Assets\Scripts\EmissionPulse.cs" />
-    <Compile Include="Assets\Scripts\FPS.cs" />
-    <Compile Include="Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\魔女圖\GetMousePosition.cs" />
     <None Include="Assets\懷舊風介面字幕\document_and_picturelist\readme.txt" />
     <None Include="Assets\魔女圖\Readme.txt" />
