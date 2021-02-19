@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MyBag
   m_EditorClassIdentifier: Assembly-CSharp::Intentory
   itemList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c37d88230c84a794f904188709cd55a3, type: 2}
+  - {fileID: 11400000, guid: 2d2d328c89de829438b6c4b9035eaed6, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
