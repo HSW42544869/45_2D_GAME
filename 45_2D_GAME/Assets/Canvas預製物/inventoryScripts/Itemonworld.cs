@@ -5,7 +5,7 @@ using UnityEngine;
 public class Itemonworld : MonoBehaviour
 {
     public Item thisItem;
-    public Intentory playerInventory;
+    public Inventory playerInventory;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

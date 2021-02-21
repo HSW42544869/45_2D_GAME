@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     static InventoryManager instance;
 
-    public Intentory myBag;
+    public Inventory myBag;
     public GameObject slotGrid;
     //public Slot slotprefab;
     public GameObject emptyslot;
@@ -45,8 +45,10 @@ public class InventoryManager : MonoBehaviour
 
     public static void RefreshItem()
     {
+        //循環刪除slotGrid下的子集物體
         for (int i = 0; i < instance.slotGrid.transform.childCount; i++)
         {
+            //循環刪除slotGrid下的子集物品
             if (instance.slotGrid.transform.childCount == 0)
             {
                 break;
@@ -57,11 +59,13 @@ public class InventoryManager : MonoBehaviour
                 instance.slots.Clear();
             }
         }
+        //從新生成對應mybag裡面的物品slot
         for (int i = 0; i < instance.myBag.itemList.Count; i++)
         {
             // CreatNewItem(instance.myBag.itemList[i]);
             instance.slots.Add(Instantiate(instance.emptyslot));
             instance.slots[i].transform.SetParent(instance.slotGrid.transform);
+            instance.slots[i].GetComponent<Slot>().slotID = i;
             instance.slots[i].GetComponent<Slot>().Setupslot(instance.myBag.itemList[i]);
         }
     }

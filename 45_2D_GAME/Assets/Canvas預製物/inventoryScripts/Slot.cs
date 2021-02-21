@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
+    public int slotID;//空格ID 等於 物品ID
     public Item slotItem;
     public Image slotImage;
     public Text slotNum;

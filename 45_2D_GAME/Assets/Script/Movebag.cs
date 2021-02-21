@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Movebag : MonoBehaviour
+public class Movebag : MonoBehaviour, IDragHandler
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    RectTransform currentRest;
 
-    // Update is called once per frame
-    void Update()
+    public void OnDrag(PointerEventData eventData)
     {
-        
+        currentRest.anchoredPosition += eventData.delta;
+    }
+    private void Awake()
+    {
+        currentRest = GetComponent<RectTransform>();
     }
 }
