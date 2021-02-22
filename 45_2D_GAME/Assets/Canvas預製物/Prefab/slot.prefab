@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc51605de338f49a8583f7d9f33bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotID: 0
   slotItem: {fileID: 0}
   slotImage: {fileID: 5163242752083623581}
   slotNum: {fileID: 2320245076999627465}
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalParent: {fileID: 0}
+  mybag: {fileID: 11400000, guid: 8da6eed31dba1f549aa6cf9631f74944, type: 2}
 --- !u!225 &8793700615739039321
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class itemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
+public class itemOnDrag : MonoBehaviour,IBeginDragHandler ,IDragHandler ,IEndDragHandler
 {
+
     public Transform originalParent;
     public Inventory mybag;
     private int currentItemID;//當前物品ID
