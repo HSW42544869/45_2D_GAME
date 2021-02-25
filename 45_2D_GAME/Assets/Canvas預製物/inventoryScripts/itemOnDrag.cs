@@ -7,23 +7,21 @@ public class itemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
 
     public Transform originalParent;
-    public Inventory mybag;
-    private int currentItemID;//當前物品ID
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;
-        currentItemID = originalParent.GetComponent<Slot>().slotID;
         transform.SetParent(transform.parent.parent);
         transform.position = eventData.position;
-        GetComponent<CanvasGroup>().blocksRaycasts = false;//射線阻擋關閉
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
-        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);//輸出鼠標當前位址下到第一個碰撞到物體名字
+        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+<<<<<<< HEAD
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
             if (eventData.pointerCurrentRaycast.gameObject.name == "item image")//判斷下面物體明子是: Item Image 那麼互換位置
@@ -60,4 +58,18 @@ public class itemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             transform.position = originalParent.position;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
+=======
+        if (eventData.pointerCurrentRaycast.gameObject.name == "item image")
+        {
+            transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
+            transform.position = eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.position;
+            eventData.pointerCurrentRaycast.gameObject.transform.parent.position = originalParent.position;
+            eventData.pointerCurrentRaycast.gameObject.transform.parent.SetParent(originalParent);
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
+            return;
+        }
+        transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
+        transform.position = eventData.pointerCurrentRaycast.gameObject.transform.position;
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
     }
