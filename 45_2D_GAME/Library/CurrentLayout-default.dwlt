@@ -114,8 +114,13 @@ MonoBehaviour:
     width: 1536
     height: 731
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 608, y: 471}
   m_MaxSize: {x: 18003, y: 14021}
+=======
+  m_MinSize: {x: 609, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
   m_MinSize: {x: 609, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
@@ -142,10 +147,13 @@ MonoBehaviour:
     width: 672
     height: 731
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
@@ -201,10 +209,13 @@ MonoBehaviour:
     width: 589
     height: 317
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -260,10 +271,13 @@ MonoBehaviour:
     width: 275
     height: 731
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -651,9 +665,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 228.37198, y: 135.8764, z: -27.63348}
     speed: 2
     m_Value: {x: 228.37198, y: 135.8764, z: -27.63348}
+=======
+    m_Target: {x: 319.5, y: 179.5, z: 0}
+    speed: 2
+    m_Value: {x: 319.5, y: 179.5, z: 0}
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
     m_Target: {x: 319.5, y: 179.5, z: 0}
     speed: 2
@@ -709,9 +729,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 288.42407
     speed: 2
     m_Value: 288.42407
+=======
+    m_Target: 366.47034
+    speed: 2
+    m_Value: 366.47034
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
     m_Target: 366.47034
     speed: 2
@@ -770,15 +796,21 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
 <<<<<<< HEAD
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 36f6ffff
       m_LastClickedID: -2506
       m_ExpandedIDs: 64fbffff
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
       scrollPos: {x: 0, y: 180}
       m_SelectedIDs: 6c430000
       m_LastClickedID: 17260
       m_ExpandedIDs: 64fbffff6c430000de430000
+<<<<<<< HEAD
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
+=======
 >>>>>>> parent of c5dcb0d0 (2/22 1.)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -843,7 +875,11 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets
+=======
+    - Assets/Script
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
     - Assets/Script
 >>>>>>> parent of c5dcb0d0 (2/22 1.)
@@ -851,9 +887,12 @@ MonoBehaviour:
   m_StartGridSize: 32
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets
   m_LastFoldersGridSize: 32
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
   - Assets/Script
   m_LastFoldersGridSize: 16
 >>>>>>> parent of c5dcb0d0 (2/22 1.)
@@ -862,15 +901,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 664a0000
     m_LastClickedID: 19046
     m_ExpandedIDs: 00000000664a0000684a00006a4a000000ca9a3b
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
     scrollPos: {x: 0, y: 75}
     m_SelectedIDs: 944a0000
     m_LastClickedID: 19092
     m_ExpandedIDs: 00000000584a00005a4a0000824a000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
+=======
 >>>>>>> parent of c5dcb0d0 (2/22 1.)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -900,7 +945,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000664a0000684a00006a4a0000
+=======
+    m_ExpandedIDs: 00000000584a00005a4a0000
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
     m_ExpandedIDs: 00000000584a00005a4a0000
 >>>>>>> parent of c5dcb0d0 (2/22 1.)
@@ -1023,7 +1072,11 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastVerticalScrollValue: 554
+=======
+  m_LastVerticalScrollValue: 0
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
 =======
   m_LastVerticalScrollValue: 0
 >>>>>>> parent of c5dcb0d0 (2/22 1.)

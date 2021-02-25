@@ -22,6 +22,7 @@ public class itemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnEndDrag(PointerEventData eventData)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
             if (eventData.pointerCurrentRaycast.gameObject.name == "item image")//判斷下面物體明子是: Item Image 那麼互換位置
@@ -59,6 +60,8 @@ public class itemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
 =======
+=======
+>>>>>>> parent of c5dcb0d0 (2/22 1.)
         if (eventData.pointerCurrentRaycast.gameObject.name == "item image")
         {
             transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent);
